@@ -17,6 +17,8 @@
 		1B90F58728BE70FB00C9B628 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90F58628BE70FB00C9B628 /* UpcomingViewController.swift */; };
 		1B90F58928BE710600C9B628 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90F58828BE710600C9B628 /* SearchViewController.swift */; };
 		1B90F58B28BE710F00C9B628 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90F58A28BE710F00C9B628 /* DownloadsViewController.swift */; };
+		1B90F59228BFAD2300C9B628 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90F59128BFAD2300C9B628 /* CollectionViewTableViewCell.swift */; };
+		1B90F59428C0415900C9B628 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90F59328C0415900C9B628 /* HeroHeaderUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		1B90F58628BE70FB00C9B628 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		1B90F58828BE710600C9B628 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1B90F58A28BE710F00C9B628 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
+		1B90F59128BFAD2300C9B628 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		1B90F59328C0415900C9B628 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,11 @@
 		1B90F56C28BE703F00C9B628 /* NetflixSwiftUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				1B90F59028BFACD800C9B628 /* Managers */,
+				1B90F58F28BFACCE00C9B628 /* Resources */,
+				1B90F58E28BFACB600C9B628 /* Models */,
+				1B90F58D28BFACAD00C9B628 /* ViewModels */,
+				1B90F58C28BFACA600C9B628 /* Views */,
 				1B90F58128BE70AF00C9B628 /* Controllers */,
 				1B90F56D28BE703F00C9B628 /* AppDelegate.swift */,
 				1B90F56F28BE703F00C9B628 /* SceneDelegate.swift */,
@@ -85,6 +94,43 @@
 				1B90F58A28BE710F00C9B628 /* DownloadsViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1B90F58C28BFACA600C9B628 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B90F59128BFAD2300C9B628 /* CollectionViewTableViewCell.swift */,
+				1B90F59328C0415900C9B628 /* HeroHeaderUIView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1B90F58D28BFACAD00C9B628 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1B90F58E28BFACB600C9B628 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1B90F58F28BFACCE00C9B628 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1B90F59028BFACD800C9B628 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,10 +204,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B90F58728BE70FB00C9B628 /* UpcomingViewController.swift in Sources */,
+				1B90F59428C0415900C9B628 /* HeroHeaderUIView.swift in Sources */,
 				1B90F58928BE710600C9B628 /* SearchViewController.swift in Sources */,
 				1B90F58B28BE710F00C9B628 /* DownloadsViewController.swift in Sources */,
 				1B90F58528BE70EC00C9B628 /* HomeViewController.swift in Sources */,
 				1B90F57228BE703F00C9B628 /* ViewController.swift in Sources */,
+				1B90F59228BFAD2300C9B628 /* CollectionViewTableViewCell.swift in Sources */,
 				1B90F58328BE70BF00C9B628 /* MainTabBarViewController.swift in Sources */,
 				1B90F56E28BE703F00C9B628 /* AppDelegate.swift in Sources */,
 				1B90F57028BE703F00C9B628 /* SceneDelegate.swift in Sources */,
