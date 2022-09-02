@@ -40,6 +40,8 @@ class HomeViewController: UIViewController {
         
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
+        
+        getTrendingMovies()
     }
     
     private func configureNavbar(){
@@ -59,6 +61,17 @@ class HomeViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         homeFeedTable.frame = view.bounds
+    }
+    
+    private func getTrendingMovies (){
+        APICaller.shared.getTrendingMovies { results in
+            switch results {
+            case .success(let movies):
+                print(movies)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
 }
@@ -94,7 +107,7 @@ extension HomeViewController : UITableViewDelegate , UITableViewDataSource {
         header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20 , y: header.bounds.origin.y, width: 100, height: header.bounds.height)
         header.textLabel?.textColor = backgroundColor
-        header.textLabel?.text =  header.textLabel?.text?.capitalized(with: .current)
+        header.textLabel?.text =  header.textLabel?.text?.capitalizeFirstLetter()
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -108,12 +121,4 @@ extension HomeViewController : UITableViewDelegate , UITableViewDataSource {
         navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0,-offSet))
     }
     
-}
-
-extension UIImage {
-    func imageResized(to size: CGSize) -> UIImage {
-        return UIGraphicsImageRenderer(size: size).image { _ in
-            draw(in: CGRect(origin: .zero, size: size))
-        }
-    }
 }
