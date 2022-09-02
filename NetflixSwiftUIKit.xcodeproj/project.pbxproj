@@ -19,6 +19,7 @@
 		1B90F58B28BE710F00C9B628 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90F58A28BE710F00C9B628 /* DownloadsViewController.swift */; };
 		1B90F59228BFAD2300C9B628 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90F59128BFAD2300C9B628 /* CollectionViewTableViewCell.swift */; };
 		1B90F59428C0415900C9B628 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90F59328C0415900C9B628 /* HeroHeaderUIView.swift */; };
+		1B90F59628C1FDE400C9B628 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90F59528C1FDE400C9B628 /* ApiCaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		1B90F58A28BE710F00C9B628 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		1B90F59128BFAD2300C9B628 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		1B90F59328C0415900C9B628 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
+		1B90F59528C1FDE400C9B628 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		1B90F59028BFACD800C9B628 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				1B90F59528C1FDE400C9B628 /* ApiCaller.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				1B90F58728BE70FB00C9B628 /* UpcomingViewController.swift in Sources */,
 				1B90F59428C0415900C9B628 /* HeroHeaderUIView.swift in Sources */,
 				1B90F58928BE710600C9B628 /* SearchViewController.swift in Sources */,
+				1B90F59628C1FDE400C9B628 /* ApiCaller.swift in Sources */,
 				1B90F58B28BE710F00C9B628 /* DownloadsViewController.swift in Sources */,
 				1B90F58528BE70EC00C9B628 /* HomeViewController.swift in Sources */,
 				1B90F57228BE703F00C9B628 /* ViewController.swift in Sources */,
