@@ -18,7 +18,7 @@ enum Sections : Int {
 class HomeViewController: UIViewController {
 
     let sectionTitles : [String] = ["Trending Movies" ,"Trending TV" , "Popular"  , "Upcoming Movies" , "Top rated"]
-    let backgroundColor = UIColor { tc in
+    let bgColor = UIColor { tc in
         switch tc.userInterfaceStyle {
         case .dark:
             return UIColor.white
@@ -61,7 +61,7 @@ class HomeViewController: UIViewController {
             UIBarButtonItem(image: UIImage(systemName:"play.rectangle") , style: .done, target: self, action: nil)
         ]
         
-        navigationController?.navigationBar.tintColor = backgroundColor
+        navigationController?.navigationBar.tintColor = bgColor
     }
     
     override func viewDidLayoutSubviews() {
@@ -87,6 +87,9 @@ extension HomeViewController : UITableViewDelegate , UITableViewDataSource {
                 as? CollectionViewTableViewCell else{
             return UITableViewCell()
         }
+        
+        cell.delegate = self
+        
         switch indexPath.section {
         case Sections.TrendingMovies.rawValue :
             APICaller.shared.getTrendingMovies { result in
@@ -151,7 +154,7 @@ extension HomeViewController : UITableViewDelegate , UITableViewDataSource {
         guard let header = view as? UITableViewHeaderFooterView else {return}
         header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20 , y: header.bounds.origin.y, width: 100, height: header.bounds.height)
-        header.textLabel?.textColor = backgroundColor
+        header.textLabel?.textColor = bgColor
         header.textLabel?.text =  header.textLabel?.text?.capitalizeFirstLetter()
     }
     
@@ -166,4 +169,16 @@ extension HomeViewController : UITableViewDelegate , UITableViewDataSource {
         navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0,-offSet))
     }
     
+}
+
+//MARK: - CollectionViewTableViewCellDelegate
+
+extension HomeViewController : CollectionViewTableViewCellDelegate {
+    func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel) {
+        DispatchQueue.main.async { [weak self] in
+            let vc = TitlePreviewViewController()
+            vc.configure(with: viewModel)
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
