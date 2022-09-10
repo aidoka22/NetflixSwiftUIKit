@@ -14,7 +14,6 @@ class TitlePreviewViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 22, weight: .bold)
-        label.text = "Harry Potter"
         return label
     }()
     
@@ -23,7 +22,6 @@ class TitlePreviewViewController: UIViewController {
         label.font = .systemFont(ofSize: 18, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.text = "This is the best moview to watch for some kids!"
         return label
     }()
     
@@ -60,12 +58,13 @@ class TitlePreviewViewController: UIViewController {
             webView.topAnchor.constraint(equalTo: view.topAnchor) ,
             webView.leadingAnchor.constraint(equalTo: view.leadingAnchor) ,
             webView.trailingAnchor.constraint(equalTo: view.trailingAnchor) ,
-            webView.heightAnchor.constraint(equalToConstant: 350)
+            webView.heightAnchor.constraint(equalToConstant: 300)
         ]
         
         let titleLabelConstraints = [
             titleLabel.topAnchor.constraint(equalTo: webView.bottomAnchor , constant: 20) ,
-            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor , constant: 20 )
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor , constant: 20 ) ,
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ]
         
         let overviewLabelConstraints = [
